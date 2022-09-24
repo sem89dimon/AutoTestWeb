@@ -11,14 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
 
     //    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 
@@ -36,8 +28,6 @@ public class App
 
         webElement.click();
         webElement.sendKeys("kazanexpress", Keys.ENTER);
-
-
 
 
 
