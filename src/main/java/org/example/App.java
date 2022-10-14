@@ -12,25 +12,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 
-    //    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+   public class App {
+           public static void main(String[] args) {
+                   //    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
-        //options.addArguments("--headless");
-        options.addArguments("start-maximized");
+                   WebDriverManager.chromedriver().setup();
+                   ChromeOptions options = new ChromeOptions();
+                   options.addArguments("--incognito");
+                   //options.addArguments("--headless");
+                   options.addArguments("start-maximized");
 
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        driver.get("https://google.com");
+                   WebDriver driver = new ChromeDriver(options);
+                   driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+                   driver.get("https://google.com");
 
-        WebElement webElement = driver.findElement(By.name("q"));
+                   WebElement webElement = driver.findElement(By.name("q"));
 
-        webElement.click();
-        webElement.sendKeys("kazanexpress", Keys.ENTER);
-
-
-
-    }
-
+                   webElement.click();
+                   webElement.sendKeys("kazanexpress", Keys.ENTER);
+           }
 }
+
+
+
+
